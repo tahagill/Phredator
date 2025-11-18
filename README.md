@@ -4,14 +4,13 @@
 
 A professional, rule-based QC toolkit for NGS (Next-Generation Sequencing) data analysis. Phredator provides intelligent quality control analysis with context-aware recommendations for FastQC reports.
 
-[![PyPI version](https://badge.fury.io/py/phredator.svg)](https://badge.fury.io/py/phredator)
-[![PyPI downloads](https://img.shields.io/pypi/dm/phredator.svg)](https://pypi.org/project/phredator/)
-[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
-[![GitHub stars](https://img.shields.io/github/stars/tahagill/Phredator.svg?style=social&label=Star)](https://github.com/tahagill/Phredator)
-[![GitHub issues](https://img.shields.io/github/issues/tahagill/Phredator.svg)](https://github.com/tahagill/Phredator/issues)
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![PyPI version](https://img.shields.io/pypi/v/phredator)](https://pypi.org/project/phredator/)
+[![PyPI downloads](https://img.shields.io/pypi/dm/phredator)](https://pypi.org/project/phredator/)
+[![Python Version](https://img.shields.io/pypi/pyversions/phredator)](https://pypi.org/project/phredator/)
+[![License](https://img.shields.io/github/license/tahagill/Phredator)](https://github.com/tahagill/Phredator/blob/master/LICENSE)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17641057.svg)](https://doi.org/10.5281/zenodo.17641057)
+[![GitHub Stars](https://img.shields.io/github/stars/tahagill/Phredator)](https://github.com/tahagill/Phredator/stargazers)
+[![GitHub Issues](https://img.shields.io/github/issues/tahagill/Phredator)](https://github.com/tahagill/Phredator/issues)
 
 ---
 
@@ -499,12 +498,10 @@ If you use Phredator in your research, please cite:
   author={Ahmad, Taha},
   year={2025},
   publisher={Zenodo},
-  doi={10.5281/zenodo.XXXXXXX},
+  doi={10.5281/zenodo.17641057},
   url={https://github.com/tahagill/Phredator}
 }
 ```
-
-**Note**: After creating a release on Zenodo, replace `XXXXXXX` with your actual DOI number in both the badge above and this citation.
 
 ---
 
