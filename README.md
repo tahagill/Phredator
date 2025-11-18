@@ -4,13 +4,13 @@
 
 A professional, rule-based QC toolkit for NGS (Next-Generation Sequencing) data analysis. Phredator provides intelligent quality control analysis with context-aware recommendations for FastQC reports.
 
-[![PyPI version](https://img.shields.io/pypi/v/phredator)](https://pypi.org/project/phredator/)
-[![PyPI downloads](https://img.shields.io/pypi/dm/phredator)](https://pypi.org/project/phredator/)
-[![Python Version](https://img.shields.io/pypi/pyversions/phredator)](https://pypi.org/project/phredator/)
-[![License](https://img.shields.io/github/license/tahagill/Phredator)](https://github.com/tahagill/Phredator/blob/master/LICENSE)
+[![PyPI version](https://badge.fury.io/py/phredator.svg)](https://badge.fury.io/py/phredator)
+[![Downloads](https://static.pepy.tech/badge/phredator)](https://pepy.tech/project/phredator)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17641057.svg)](https://doi.org/10.5281/zenodo.17641057)
-[![GitHub Stars](https://img.shields.io/github/stars/tahagill/Phredator)](https://github.com/tahagill/Phredator/stargazers)
-[![GitHub Issues](https://img.shields.io/github/issues/tahagill/Phredator)](https://github.com/tahagill/Phredator/issues)
+[![GitHub stars](https://img.shields.io/github/stars/tahagill/Phredator.svg)](https://github.com/tahagill/Phredator/stargazers)
+[![GitHub issues](https://img.shields.io/github/issues/tahagill/Phredator.svg)](https://github.com/tahagill/Phredator/issues)
 
 ---
 
