@@ -10,7 +10,7 @@ long_description = (this_directory / "README.md").read_text(encoding="utf-8")
 
 setup(
     name="phredator",
-    version="1.0.0",
+    version="1.0.1",
     author="Taha Ahmad",
     author_email="tahagill99@gmail.com",
     description="Intelligent NGS Quality Control with automated fix suggestions",
