@@ -4,8 +4,14 @@
 
 A professional, rule-based QC toolkit for NGS (Next-Generation Sequencing) data analysis. Phredator provides intelligent quality control analysis with context-aware recommendations for FastQC reports.
 
+[![PyPI version](https://badge.fury.io/py/phredator.svg)](https://badge.fury.io/py/phredator)
+[![PyPI downloads](https://img.shields.io/pypi/dm/phredator.svg)](https://pypi.org/project/phredator/)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
+[![GitHub stars](https://img.shields.io/github/stars/tahagill/Phredator.svg?style=social&label=Star)](https://github.com/tahagill/Phredator)
+[![GitHub issues](https://img.shields.io/github/issues/tahagill/Phredator.svg)](https://github.com/tahagill/Phredator/issues)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 ---
 
@@ -487,14 +493,18 @@ phredator/
 
 If you use Phredator in your research, please cite:
 
-```
-@software{phredator2024,
+```bibtex
+@software{phredator2025,
   title={Phredator: Intelligent Quality Control for NGS Data},
-  author={Taha Ahmad},
-  year={2024},
+  author={Ahmad, Taha},
+  year={2025},
+  publisher={Zenodo},
+  doi={10.5281/zenodo.XXXXXXX},
   url={https://github.com/tahagill/Phredator}
 }
 ```
+
+**Note**: After creating a release on Zenodo, replace `XXXXXXX` with your actual DOI number in both the badge above and this citation.
 
 ---
 
