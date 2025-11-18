@@ -1,0 +1,32 @@
+# Chimpanzee (Pan troglodytes) QC Profile
+name: "Chimpanzee (Pan troglodytes)"
+assembly: "Pan_tro_3.0"
+description: "QC thresholds for chimpanzee genome sequencing"
+gc_content:
+  mean: 40.5
+  range: [37.5, 43.5]
+  tolerance: 3.0
+quality:
+  q20_threshold: 0.80
+  q28_threshold: 0.80
+  q30_threshold: 0.75
+  mean_quality_min: 28
+duplication:
+  acceptable: 20
+  warning: 35
+  critical: 50
+adapters:
+  acceptable: 5
+  warning: 10
+  critical: 15
+n_content:
+  max_per_base: 5
+  max_total: 1
+overrepresented:
+  max_count: 5
+  max_percentage: 1.0
+read_length:
+  min: 50
+  typical: [75, 150]
+notes: |
+  Standard eukaryote sequencing.

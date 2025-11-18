@@ -1,0 +1,54 @@
+# Human (Homo sapiens) QC Profile
+# Based on GRCh38 reference genome
+
+name: "Human (Homo sapiens)"
+assembly: "GRCh38"
+description: "QC thresholds for human whole genome and exome sequencing"
+
+# GC content expectations
+gc_content:
+  mean: 41.0
+  range: [38, 43]
+  tolerance: 3.0  # Allow ±3% variation
+
+# Quality score thresholds
+quality:
+  q20_threshold: 0.80  # 80% of bases above Q20
+  q28_threshold: 0.80  # 80% of bases above Q28
+  q30_threshold: 0.75  # 75% of bases above Q30
+  mean_quality_min: 28
+
+# Duplication levels
+duplication:
+  acceptable: 20   # <20% is good
+  warning: 35      # 20-35% is concerning
+  critical: 50     # >50% is critical
+  
+# Adapter contamination
+adapters:
+  acceptable: 5    # <5% is good
+  warning: 10      # 5-10% is concerning
+  critical: 15     # >10% is critical
+
+# N content (ambiguous bases)
+n_content:
+  max_per_base: 5  # Max 5% N at any position
+  max_total: 1     # Max 1% N overall
+
+# Overrepresented sequences
+overrepresented:
+  max_count: 5     # Max 5 overrepresented sequences
+  max_percentage: 1.0  # Max 1% of total reads
+
+# Read length expectations
+read_length:
+  min: 50
+  typical: [75, 150]  # Common Illumina read lengths
+  
+# Notes
+notes: |
+  Human genome GC content varies by region:
+  - Overall: ~41%
+  - GC-rich regions (promoters, CpG islands): 50-60%
+  - AT-rich regions (heterochromatin): 30-35%
+  Whole genome data should average ~41%

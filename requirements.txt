@@ -1,0 +1,6 @@
+# Core dependencies
+numpy>=1.20.0
+PyYAML>=5.4.0
+
+# Development dependencies (optional)
+pytest>=7.0.0

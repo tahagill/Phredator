@@ -1,0 +1,54 @@
+# Drosophila (D. melanogaster) QC Profile
+# Based on dm6 reference
+
+name: "Drosophila melanogaster"
+assembly: "dm6"
+description: "QC thresholds for fruit fly sequencing"
+
+# GC content expectations
+gc_content:
+  mean: 42.0
+  range: [39, 45]
+  tolerance: 3.0
+
+# Quality score thresholds
+quality:
+  q20_threshold: 0.80
+  q28_threshold: 0.80
+  q30_threshold: 0.75
+  mean_quality_min: 28
+
+# Duplication levels
+duplication:
+  acceptable: 20
+  warning: 35
+  critical: 50
+  
+# Adapter contamination
+adapters:
+  acceptable: 5
+  warning: 10
+  critical: 15
+
+# N content
+n_content:
+  max_per_base: 5
+  max_total: 1
+
+# Overrepresented sequences
+overrepresented:
+  max_count: 5
+  max_percentage: 1.0
+
+# Read length expectations
+read_length:
+  min: 50
+  typical: [75, 150]
+  
+notes: |
+  D. melanogaster genome:
+  - Size: ~140 Mbp
+  - 4 chromosomes (3 autosomes + X/Y)
+  - GC: 42%
+  - Heterochromatin in centromeric regions
+  - Common model organism for genetics

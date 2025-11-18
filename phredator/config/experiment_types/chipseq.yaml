@@ -1,0 +1,53 @@
+# ChIP Sequencing QC Profile
+
+name: "ChIP Sequencing"
+abbrev: "chipseq"
+description: "Chromatin immunoprecipitation sequencing"
+
+# GC content (ChIP-seq enriches GC-rich promoters/open chromatin)
+gc_content:
+  mean: 55.0
+  range: [45, 65]
+  tolerance: 5.0
+  note: "Enriched regions (promoters, CpG islands) are highly GC-rich (~55-65%)"
+
+# Quality expectations
+quality:
+  q20_threshold: 0.80
+  q28_threshold: 0.80
+  q30_threshold: 0.75
+  mean_quality_min: 28
+
+# Duplication (depends on IP efficiency)
+duplication:
+  acceptable: 30   # Higher than WGS
+  warning: 50
+  critical: 70
+  check_duplicates: true
+  note: "Duplication depends on IP enrichment and library complexity"
+
+# Coverage expectations (enriched regions)
+coverage:
+  min_coverage: 10
+  target_coverage: 20
+  high_coverage: 100
+
+# Adapter removal
+adapters:
+  required: true
+  acceptable: 5
+  warning: 10
+  critical: 15
+
+# Special considerations
+special:
+  expect_enrichment: true
+  nonuniform_coverage_expected: true
+  check_library_complexity: true
+
+notes: |
+  ChIP-seq characteristics:
+  - Moderate duplication acceptable (enrichment at peaks)
+  - Library complexity important (measure with PCR bottleneck coefficient)
+  - Non-uniform coverage expected (signal at binding sites)
+  - Control/Input sample critical for analysis

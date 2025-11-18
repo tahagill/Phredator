@@ -1,0 +1,8 @@
+include README.md
+include LICENSE
+include requirements.txt
+recursive-include phredator/config *.yaml
+recursive-exclude tests *
+recursive-exclude test_* *
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]

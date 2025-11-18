@@ -1,0 +1,28 @@
+##FastQC    0.11.9
+>>Per base sequence quality
+#Base    Mean    Median
+1-10     35.0    34.0
+11-20    36.0    36.0
+>>END_MODULE
+
+>>Per sequence GC content
+#Count    GC
+1    50.0
+>>END_MODULE
+
+>>Sequence Duplication Levels
+#Count    Fraction
+1    0.1
+2    0.2
+>>END_MODULE
+
+>>Adapter Content
+#Adapter    Fraction
+AGATCGGAAG    0.05
+>>END_MODULE
+
+>>Overrepresented sequences
+#Sequence    Count
+AATTGGCC    10
+CCGGTTAA    5
+>>END_MODULE

@@ -1,0 +1,56 @@
+# SARS-CoV-2 QC Profile
+# Based on Wuhan-Hu-1 reference (NC_045512.2)
+
+name: "SARS-CoV-2"
+assembly: "NC_045512.2"
+description: "QC thresholds for COVID-19 viral genome sequencing"
+
+# GC content expectations
+gc_content:
+  mean: 38.0
+  range: [36, 40]
+  tolerance: 2.0
+
+# Quality score thresholds (stricter for viral surveillance)
+quality:
+  q20_threshold: 0.90  # Very high quality needed
+  q28_threshold: 0.85
+  q30_threshold: 0.80
+  mean_quality_min: 30
+
+# Duplication levels (amplicon sequencing has high duplication)
+duplication:
+  acceptable: 50   # Much higher tolerance for amplicon
+  warning: 70
+  critical: 85
+  
+# Adapter contamination
+adapters:
+  acceptable: 5
+  warning: 10
+  critical: 15
+
+# N content (critical for variant calling)
+n_content:
+  max_per_base: 1   # Very strict
+  max_total: 0.1
+
+# Overrepresented sequences (amplicon primers expected)
+overrepresented:
+  max_count: 20     # Primers expected
+  max_percentage: 5.0
+
+# Read length expectations
+read_length:
+  min: 75
+  typical: [150, 250]  # Amplicon sequencing
+  
+notes: |
+  SARS-CoV-2 genome:
+  - Size: 29.9 kb (very small)
+  - Single-stranded RNA virus
+  - GC: 38%
+  - Usually sequenced with amplicon methods (ARTIC, etc.)
+  - High duplication expected and acceptable
+  - Requires very high quality for variant detection
+  - Clinical surveillance use case

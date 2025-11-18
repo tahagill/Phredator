@@ -1,0 +1,52 @@
+# Whole Exome Sequencing (WES) QC Profile
+
+name: "Whole Exome Sequencing"
+abbrev: "wes"
+description: "Targeted sequencing of protein-coding regions"
+
+# GC content (Exons are slightly GC-richer than genome)
+gc_content:
+  mean: 45.0
+  range: [40, 55]
+  tolerance: 4.0
+  note: "Coding exons are GC-richer than genome average (~45% vs ~41%)"
+
+# Quality expectations
+quality:
+  q20_threshold: 0.85  # Slightly higher for targeted
+  q28_threshold: 0.80
+  q30_threshold: 0.75
+  mean_quality_min: 30
+
+# Duplication (higher than WGS due to targeting)
+duplication:
+  acceptable: 30
+  warning: 45
+  critical: 60
+  check_duplicates: true
+
+# Coverage expectations (targeted, higher coverage)
+coverage:
+  min_coverage: 20
+  target_coverage: 100
+  high_coverage: 200
+
+# Adapter removal
+adapters:
+  required: true
+  acceptable: 5
+  warning: 10
+  critical: 15
+
+# Special considerations
+special:
+  targeted_sequencing: true
+  expect_nonuniform_coverage: true
+  off_target_acceptable: 20  # % reads off target
+
+notes: |
+  WES characteristics:
+  - Higher duplication than WGS (limited target space)
+  - Very high coverage of exons required
+  - Off-target reads expected (~20%)
+  - Capture efficiency important metric

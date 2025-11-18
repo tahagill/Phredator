@@ -1,0 +1,43 @@
+# C. elegans (Caenorhabditis elegans) QC Profile
+# Based on WBcel235 reference genome
+
+name: "C. elegans (Caenorhabditis elegans)"
+assembly: "WBcel235"
+description: "QC thresholds for nematode sequencing"
+
+gc_content:
+  mean: 36.0
+  range: [33, 39]
+  tolerance: 3.0
+
+quality:
+  q20_threshold: 0.80
+  q28_threshold: 0.80
+  q30_threshold: 0.75
+  mean_quality_min: 28
+
+duplication:
+  acceptable: 20
+  warning: 35
+  critical: 50
+  
+adapters:
+  acceptable: 5
+  warning: 10
+  critical: 15
+
+n_content:
+  max_per_base: 5
+  max_total: 1
+
+overrepresented:
+  max_count: 5
+  max_percentage: 1.0
+
+read_length:
+  min: 50
+  typical: [75, 150]
+  
+notes: |
+  Model organism for developmental biology and genetics.
+  Relatively small genome (~100 Mb).

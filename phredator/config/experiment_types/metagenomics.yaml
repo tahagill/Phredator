@@ -1,0 +1,46 @@
+# Metagenomics QC Profile
+
+name: "Metagenomics"
+abbrev: "metagenomics"
+description: "Community genomics / microbiome sequencing"
+
+# Quality expectations
+quality:
+  q20_threshold: 0.80
+  q28_threshold: 0.75
+  q30_threshold: 0.70
+  mean_quality_min: 25
+
+# Duplication (variable across species)
+duplication:
+  acceptable: 40   # More tolerant
+  warning: 60
+  critical: 75
+  check_duplicates: true
+
+# GC content (highly variable!)
+gc_content:
+  check: false  # Don't check - multiple organisms
+  note: "GC content varies widely across organisms in community"
+
+# Adapter removal
+adapters:
+  required: true
+  acceptable: 5
+  warning: 10
+  critical: 15
+
+# Special considerations
+special:
+  multiple_organisms: true
+  variable_gc_content: true
+  check_host_contamination: true
+  expect_high_diversity: true
+
+notes: |
+  Metagenomics characteristics:
+  - Multiple organisms = variable GC content
+  - Don't apply single-organism GC thresholds
+  - Host contamination (e.g., human DNA) is common
+  - Diversity metrics important
+  - Quality slightly less critical than single-organism studies

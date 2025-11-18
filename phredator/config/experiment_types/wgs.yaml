@@ -1,0 +1,39 @@
+# Whole Genome Sequencing (WGS) QC Profile
+
+name: "Whole Genome Sequencing"
+abbrev: "wgs"
+description: "Standard DNA whole genome sequencing"
+
+# Quality expectations
+quality:
+  q20_threshold: 0.80
+  q28_threshold: 0.80
+  q30_threshold: 0.75
+  mean_quality_min: 28
+
+# Duplication (PCR duplicates expected)
+duplication:
+  acceptable: 20
+  warning: 35
+  critical: 50
+  check_duplicates: true  # Should check and remove
+
+# Coverage expectations
+coverage:
+  min_coverage: 10
+  target_coverage: 30
+  high_coverage: 60
+
+# Adapter removal
+adapters:
+  required: true
+  acceptable: 5
+  warning: 10
+  critical: 15
+
+notes: |
+  WGS characteristics:
+  - Uniform coverage expected across genome
+  - PCR duplicates should be marked/removed
+  - Standard quality thresholds apply
+  - Important for variant calling accuracy

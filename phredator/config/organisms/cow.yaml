@@ -1,0 +1,32 @@
+# Cow (Bos taurus) QC Profile
+name: "Cow (Bos taurus)"
+assembly: "ARS-UCD1.2"
+description: "QC thresholds for cow genome sequencing"
+gc_content:
+  mean: 42.0
+  range: [39.0, 45.0]
+  tolerance: 3.0
+quality:
+  q20_threshold: 0.80
+  q28_threshold: 0.80
+  q30_threshold: 0.75
+  mean_quality_min: 28
+duplication:
+  acceptable: 20
+  warning: 35
+  critical: 50
+adapters:
+  acceptable: 5
+  warning: 10
+  critical: 15
+n_content:
+  max_per_base: 5
+  max_total: 1
+overrepresented:
+  max_count: 5
+  max_percentage: 1.0
+read_length:
+  min: 50
+  typical: [75, 150]
+notes: |
+  Standard eukaryote sequencing.

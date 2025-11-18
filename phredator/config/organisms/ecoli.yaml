@@ -1,0 +1,54 @@
+# E. coli QC Profile
+# Based on K-12 MG1655 reference
+
+name: "Escherichia coli"
+strain: "K-12 MG1655"
+description: "QC thresholds for E. coli bacterial sequencing"
+
+# GC content expectations
+gc_content:
+  mean: 50.8
+  range: [49, 52]
+  tolerance: 1.5  # Tighter tolerance for bacteria
+
+# Quality score thresholds
+quality:
+  q20_threshold: 0.85  # Higher standards for bacteria
+  q28_threshold: 0.80
+  q30_threshold: 0.75
+  mean_quality_min: 30
+
+# Duplication levels (bacteria have less duplication)
+duplication:
+  acceptable: 5    # Much lower than eukaryotes
+  warning: 15
+  critical: 30
+  
+# Adapter contamination
+adapters:
+  acceptable: 5
+  warning: 10
+  critical: 15
+
+# N content
+n_content:
+  max_per_base: 2  # Stricter for small genome
+  max_total: 0.5
+
+# Overrepresented sequences
+overrepresented:
+  max_count: 3
+  max_percentage: 0.5
+
+# Read length expectations
+read_length:
+  min: 50
+  typical: [150, 250]  # Longer reads better for small genomes
+  
+notes: |
+  E. coli genome:
+  - Size: 4.6 Mbp (much smaller than mammals)
+  - GC: 50.8% (very uniform)
+  - Circular chromosome
+  - High coverage possible with fewer reads
+  - Lower duplication expected due to genome size

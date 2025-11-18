@@ -1,0 +1,50 @@
+# Mouse (Mus musculus) QC Profile
+# Based on GRCm39 reference genome
+
+name: "Mouse (Mus musculus)"
+assembly: "GRCm39"
+description: "QC thresholds for mouse genome sequencing"
+
+# GC content expectations
+gc_content:
+  mean: 42.0
+  range: [39, 44]
+  tolerance: 3.0
+
+# Quality score thresholds
+quality:
+  q20_threshold: 0.80
+  q28_threshold: 0.80
+  q30_threshold: 0.75
+  mean_quality_min: 28
+
+# Duplication levels
+duplication:
+  acceptable: 20
+  warning: 35
+  critical: 50
+  
+# Adapter contamination
+adapters:
+  acceptable: 5
+  warning: 10
+  critical: 15
+
+# N content
+n_content:
+  max_per_base: 5
+  max_total: 1
+
+# Overrepresented sequences
+overrepresented:
+  max_count: 5
+  max_percentage: 1.0
+
+# Read length expectations
+read_length:
+  min: 50
+  typical: [75, 150]
+  
+notes: |
+  Mouse genome GC content (~42%) is very similar to human.
+  Laboratory mice are inbred, expect low heterozygosity.

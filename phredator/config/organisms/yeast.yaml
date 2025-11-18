@@ -1,0 +1,54 @@
+# Yeast (S. cerevisiae) QC Profile
+# Based on S288C reference
+
+name: "Saccharomyces cerevisiae"
+strain: "S288C"
+description: "QC thresholds for budding yeast sequencing"
+
+# GC content expectations
+gc_content:
+  mean: 38.3
+  range: [36, 40]
+  tolerance: 2.0
+
+# Quality score thresholds
+quality:
+  q20_threshold: 0.85
+  q28_threshold: 0.80
+  q30_threshold: 0.75
+  mean_quality_min: 28
+
+# Duplication levels
+duplication:
+  acceptable: 15
+  warning: 30
+  critical: 45
+  
+# Adapter contamination
+adapters:
+  acceptable: 5
+  warning: 10
+  critical: 15
+
+# N content
+n_content:
+  max_per_base: 3
+  max_total: 0.5
+
+# Overrepresented sequences
+overrepresented:
+  max_count: 5
+  max_percentage: 1.0
+
+# Read length expectations
+read_length:
+  min: 50
+  typical: [75, 150]
+  
+notes: |
+  S. cerevisiae genome:
+  - Size: 12.1 Mbp
+  - 16 chromosomes
+  - GC: 38.3% (AT-rich compared to mammals)
+  - Common model organism
+  - Relatively uniform GC distribution

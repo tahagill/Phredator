@@ -1,0 +1,55 @@
+# RNA Sequencing QC Profile
+
+name: "RNA Sequencing"
+abbrev: "rnaseq"
+description: "Transcriptome sequencing (mRNA-seq, total RNA-seq)"
+
+# GC content (RNA-seq is GC-richer than genomic DNA)
+gc_content:
+  mean: 52.0
+  range: [45, 60]
+  tolerance: 4.0
+  note: "mRNA/transcripts are GC-richer than genome (~50% vs ~41% in human)"
+
+# Quality expectations
+quality:
+  q20_threshold: 0.80
+  q28_threshold: 0.80
+  q30_threshold: 0.75
+  mean_quality_min: 28
+
+# Duplication (HIGH duplication is NORMAL for RNA-seq!)
+duplication:
+  acceptable: 60   # Much higher than DNA-seq
+  warning: 75
+  critical: 85
+  check_duplicates: false  # Do NOT remove for RNA-seq!
+  note: "High duplication expected due to highly expressed genes"
+
+# Coverage expectations (non-uniform expected)
+coverage:
+  min_coverage: 1
+  target_coverage: 20
+  high_coverage: 1000  # Highly expressed genes
+
+# Adapter removal
+adapters:
+  required: true
+  acceptable: 5
+  warning: 10
+  critical: 15
+
+# Special considerations
+special:
+  allow_high_duplication: true
+  expect_nonuniform_coverage: true
+  check_strand_specificity: true
+  check_rrna_contamination: true
+
+notes: |
+  RNA-seq characteristics:
+  - High duplication is NORMAL (abundant transcripts)
+  - DO NOT remove duplicates (they're real biological signal)
+  - Non-uniform coverage expected (gene expression varies)
+  - rRNA contamination is common issue
+  - Strand-specific protocols preferred

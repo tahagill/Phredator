@@ -1,0 +1,4 @@
+# Test sample list for batch processing
+phredator/tests/test_data/sample1.fastq
+phredator/tests/test_data/sample2.fastq
+phredator/tests/test_data/sample3.fastq
