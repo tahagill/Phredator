@@ -10,7 +10,7 @@ long_description = (this_directory / "README.md").read_text(encoding="utf-8")
 
 setup(
     name="phredator",
-    version="1.0.1",
+    version="1.0.2",
     author="Taha Ahmad",
     author_email="tahagill99@gmail.com",
     description="Intelligent NGS Quality Control with automated fix suggestions",
@@ -32,6 +32,12 @@ setup(
         "PyYAML>=5.4.0",
     ],
     python_requires=">=3.8",
+    keywords=[
+        'bioinformatics', 'ngs', 'quality-control', 'fastqc', 'sequencing', 
+        'genomics', 'rna-seq', 'chip-seq', 'whole-genome-sequencing',
+        'next-generation-sequencing', 'qc', 'phred', 'multiqc',
+        'data-analysis', 'computational-biology', 'pipeline'
+    ],
     entry_points={
         'console_scripts': [
             'phredator=phredator.cli.cli:main',
@@ -50,5 +56,4 @@ setup(
         "Programming Language :: Python :: 3.12",
         "Operating System :: OS Independent",
     ],
-    keywords="bioinformatics ngs qc quality-control fastqc multiqc sequencing genomics",
 )
